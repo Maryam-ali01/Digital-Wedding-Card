@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moon &amp; Earth — Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="starfield"></div>
+<div id="petalLayer"></div>
+
+<div class="door-overlay" id="doorOverlay">
+  <div class="door-panel left">
+    <div class="door-stars" id="doorStarsLeft"></div>
+    <img class="door-swirl" style="--flip:1" src="images/swirl.webp" alt="">
+    <div class="door-frame">
+      <div class="corner tl"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+      <div class="corner tr"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+      <div class="corner bl"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+      <div class="corner br"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+    </div>
+    <div class="monogram-wrap">
+      <svg viewBox="0 0 110 110"><circle cx="55" cy="55" r="46" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M18 55 Q10 30 30 16 Q22 34 26 50 Q20 46 18 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M18 55 Q10 80 30 94 Q22 76 26 60 Q20 64 18 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M92 55 Q100 30 80 16 Q88 34 84 50 Q90 46 92 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M92 55 Q100 80 80 94 Q88 76 84 60 Q90 64 92 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+      </svg>
+      <span class="door-monogram">M</span>
+    </div>
+  </div>
+  <div class="door-panel right">
+    <div class="door-stars" id="doorStarsRight"></div>
+    <img class="door-swirl" style="--flip:-1" src="images/swirl.webp" alt="">
+    <div class="door-frame">
+      <div class="corner tl"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+      <div class="corner tr"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+      <div class="corner bl"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+      <div class="corner br"><svg viewBox="0 0 34 34"><path d="M2 32 Q2 2 32 2" fill="none" stroke="#d9b466" stroke-width="1"/><path d="M2 20 Q2 10 12 10" fill="none" stroke="#d9b466" stroke-width="1"/><circle cx="2" cy="32" r="2" fill="#d9b466"/></svg></div>
+    </div>
+    <div class="monogram-wrap">
+      <svg viewBox="0 0 110 110"><circle cx="55" cy="55" r="46" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M18 55 Q10 30 30 16 Q22 34 26 50 Q20 46 18 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M18 55 Q10 80 30 94 Q22 76 26 60 Q20 64 18 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M92 55 Q100 30 80 16 Q88 34 84 50 Q90 46 92 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+        <path d="M92 55 Q100 80 80 94 Q88 76 84 60 Q90 64 92 55Z" fill="none" stroke="#d9b466" stroke-width="1"/>
+      </svg>
+      <span class="door-monogram">E</span>
+    </div>
+  </div>
+  <div class="door-glow"></div>
+  <div class="door-seam"></div>
+  <div class="door-handle"></div>
+  <div class="door-tap" id="doorTap">tap to open</div>
+</div>
+
+<section class="title-reveal" id="titleReveal">
+  <div class="crescent-wrap"><img class="crescent" src="images/crescent.webp" alt=""></div>
+  <p class="welcome">You are invited to the wedding of</p>
+  <h1 class="big">Moon <span class="amp">&amp;</span> Earth</h1>
+</section>
+
+<section class="sky" id="topSky">
+  <div class="orbit-wrap">
+    <div class="orbit-ring"></div>
+    <div class="earth"></div>
+    <div class="moon"></div>
+  </div>
+
+  <p class="eyebrow">Together with their families</p>
+  <h1 class="names">Moon <span class="amp">&amp;</span> Earth</h1>
+  <p class="tagline">request the honour of your presence as they align, orbit, and remain — always in each other's light.</p>
+  <img class="divider" src="images/divider-swirl.webp" alt="">
+
+  <div class="details">
+    <div class="detail">
+      <div class="label">Date</div>
+      <div class="value">30 · 12 · 2030</div>
+    </div>
+    <div class="detail">
+      <div class="label">Venue</div>
+      <div class="value">Edinburgh</div>
+    </div>
+  </div>
+
+  <div class="scrolldown">scroll ↓</div>
+</section>
+
+<section class="invite-body">
+  <div class="card" id="rsvpCard">
+    <span class="fc tl"><img src="images/corner.webp" alt=""></span>
+    <span class="fc tr"><img src="images/corner.webp" alt=""></span>
+    <span class="fc bl"><img src="images/corner.webp" alt=""></span>
+    <span class="fc br"><img src="images/corner.webp" alt=""></span>
+    <h2>You Are Cordially Invited</h2>
+    <img class="h-divider" src="images/divider-line.webp" alt="">
+    <p>Monday, the thirtieth of December, two thousand thirty</p>
+    <p>Edinburgh, Scotland</p>
+    <p>Evening ceremony, followed by dinner under the stars</p>
+    <a class="rsvp" href="#rsvpSection">RSVP</a>
+  </div>
+</section>
+
+<section class="rsvp-section" id="rsvpSection">
+  <div class="rsvp-card">
+    <img class="wreath" src="images/wreath.webp" alt="">
+    <h2>Will You Be Joining Us?</h2>
+    <p class="sub">Kindly let the stars know by 1st November 2030</p>
+    <div class="rsvp-buttons">
+      <button class="rsvp-btn yes" onclick="respond(true)">Joyfully Accepts</button>
+      <button class="rsvp-btn no" onclick="respond(false)">Regretfully Declines</button>
+    </div>
+    <div class="rsvp-response" id="rsvpResponse"></div>
+  </div>
+</section>
+
+<section class="gift-section">
+  <div class="gift-card">
+    <span class="fc tl"><img src="images/corner.webp" alt=""></span>
+    <span class="fc tr"><img src="images/corner.webp" alt=""></span>
+    <span class="fc bl"><img src="images/corner.webp" alt=""></span>
+    <span class="fc br"><img src="images/corner.webp" alt=""></span>
+    <h2>Gifts &amp; Blessings</h2>
+    <img class="h-divider" src="images/divider-line.webp" alt="">
+    <p class="note">Your presence is the greatest gift — but should you wish to send one, here are our details.</p>
+    <div class="bank-row"><span class="k">Account Title</span><span>Moon &amp; Earth</span></div>
+    <div class="bank-row"><span class="k">Bank</span><span>Your Bank Name</span></div>
+    <div class="bank-row"><span class="k">Account No.</span><span>XXXX-XXXX-XXXX</span></div>
+    <div class="bank-row"><span class="k">IBAN</span><span>XX00 XXXX XXXX XXXX</span></div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
